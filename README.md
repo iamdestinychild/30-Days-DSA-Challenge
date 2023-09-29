@@ -1,4 +1,4 @@
-# 30-Days-DSA-Practices
+# 30-Days-DSA-Challenge
 
 Getting into Data Structure And Algorithms May Look Challenging.
 
