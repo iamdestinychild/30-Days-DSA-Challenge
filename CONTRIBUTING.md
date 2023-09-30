@@ -38,8 +38,8 @@ To contribute on 30-Days-DSA-Challenge, Follow these steps:
 
     - Create a folder with the name of the problem or issues you are solving (26-Remove-Duplicates-from-Sorted-Array) It should be clear.
     - Create a folder that states the language you are using to solve the problem (python, c#, c++, c, python, javascript, any of your choice).
-    - In the language folder create a README.md file that sates how to startup the file
-    - In the language folder create a solution.md file that has the question how how you solved it
+    - Create a README.md file that sates how to startup the file
+    - Create a PROBLEM.md file that has the question and how you solved it if you like to do so
     - In the language folder take a screenshot of the success message when you solved the problem on leetcode or hackerrank
 
 5. **Make changes and commit:**
@@ -49,7 +49,8 @@ To contribute on 30-Days-DSA-Challenge, Follow these steps:
     ```bash
         git commit -m "my commit"
     ```
-5. **Push your changes**
+
+6. **Push your changes**
 
     ```bash
         git push origin 26-Remove-Duplicates-from-Sorted-Array
@@ -61,7 +62,7 @@ To contribute on 30-Days-DSA-Challenge, Follow these steps:
         git push origin 26-RDFSA
     ```
 
-6. **Create a pull request**
+7. **Create a pull request**
 
     Go to the 30-Days-DSA-Challenge and click the "New Pull Request" button, give a description of your changes and await review for merge.
 
