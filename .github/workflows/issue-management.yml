@@ -1,4 +1,4 @@
-name: Issue Management and Code Review
+name: Issue Management and Code Review for DSA
 
 on:
   push:
@@ -16,11 +16,13 @@ jobs:
         run: |
           # Label new issues with the appropriate tags, such as "bug", "enhancement", or "question".
           gh issue label --repo ${{github.repository}} --issue-number ${{github.issue.number}} <label>
+          gh issue label --repo ${{github.repository}} --issue-number ${{github.issue.number}} DSA
 
       - name: Assign Issues
         run: |
           # Assign issues to the appropriate developers or teams.
           gh issue assign --repo ${{github.repository}} --issue-number ${{github.issue.number}} <assignee>
+          gh issue assign --repo ${{github.repository}} --issue-number ${{github.issue.number}} team-dsa
 
   code-review:
     name: Code Review
@@ -35,8 +37,8 @@ jobs:
           node-version: 16
 
       - name: Install Code Review Tools
-        run: npm install -g <code-review-tool>
+        run: npm install -g dsa-code-review-tool
 
       - name: Run Code Review
-        run: <code-review-tool>
+        run: dsa-code-review-tool
 

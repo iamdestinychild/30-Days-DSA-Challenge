@@ -1,28 +1,28 @@
-name: Super Linter
+name: Lint Code Base
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
+    branches:
+      - main
 
 jobs:
-  super-linter:
-    name: Run Super Linter
+  build:
+    name: Lint Code Base
     runs-on: ubuntu-latest
+
     permissions:
       contents: read
+      packages: read
+      statuses: write
 
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Setup Super Linter
-        uses: actions/setup-node@v3
+      - uses: super-linter/super-linter@v5.1.1
+        name: Super-Linter
         with:
-          node-version: 16
-
-      - name: Install Super Linter
-        run: npm install -g super-linter
-
-      - name: Run Super Linter
-        run: super-linter --fail-on-error
-
+          fetch-depth: 0
+          VALIDATE_ALL_CODEBASE: true
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
