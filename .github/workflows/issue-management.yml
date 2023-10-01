@@ -1,44 +1,52 @@
-name: Issue Management and Code Review for DSA
+name: DSA Issue Management
 
 on:
-  push:
-    branches: [main]
-  pull_request:
+  issues:
+    types: [opened, edited, closed]
 
 jobs:
-  issue-triage:
-    name: Triage Issues
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
 
-      - name: Label Issues
-        run: |
-          # Label new issues with the appropriate tags, such as "bug", "enhancement", or "question".
-          gh issue label --repo ${{github.repository}} --issue-number ${{github.issue.number}} <label>
-          gh issue label --repo ${{github.repository}} --issue-number ${{github.issue.number}} DSA
-
-      - name: Assign Issues
-        run: |
-          # Assign issues to the appropriate developers or teams.
-          gh issue assign --repo ${{github.repository}} --issue-number ${{github.issue.number}} <assignee>
-          gh issue assign --repo ${{github.repository}} --issue-number ${{github.issue.number}} team-dsa
-
-  code-review:
-    name: Code Review
-    runs-on: ubuntu-latest
-    needs: issue-triage
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Setup Code Review
-        uses: actions/setup-node@v3
+      - name: Label issues
+        uses: actions/labeler@v4
         with:
-          node-version: 16
+          configuration_path: .github/labels.yml
 
-      - name: Install Code Review Tools
-        run: npm install -g dsa-code-review-tool
+      - name: Assign issues
+        uses: actions/github-script@v5
+        with:
+          script: |
+            github.issues.update({
+              issue_number: context.issue.number,
+              assignees: ['assignee1', 'assignee2']
+            })
 
-      - name: Run Code Review
-        run: dsa-code-review-tool
+      - name: Notify assignees
+        uses: actions/github-script@v5
+        with:
+          script: |
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              body: '@assignee1, @assignee2, you have been assigned this issue.'
+            })
 
+      - name: Close duplicate issues
+        uses: actions/github-script@v5
+        with:
+          script: |
+            const duplicates = await github.issues.listForRepo({
+              repository: context.repo.name,
+              issue_number: context.issue.number,
+              duplicates: true
+            })
+
+            duplicates.forEach(async (duplicate) => {
+              await github.issues.update({
+                issue_number: duplicate.issue_number,
+                state: 'closed'
+              })
+            })
