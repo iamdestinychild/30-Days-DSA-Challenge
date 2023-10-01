@@ -1,0 +1,28 @@
+name: Super Linter
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  super-linter:
+    name: Run Super Linter
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Super Linter
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install Super Linter
+        run: npm install -g super-linter
+
+      - name: Run Super Linter
+        run: super-linter --fail-on-error
+

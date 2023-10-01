@@ -1,0 +1,24 @@
+name: "DSA Issue Request"
+description: Create a new ticket for a new DSA issue request
+title: "[ISSUE] - <title>"
+labels: [
+  "DSA",
+  "Issue",
+  "hacktoberfest",
+  "priority:medium"
+]
+body:
+  - type: textarea
+    id: Description
+    attributes:
+      label: "Description"
+      description: Provide a detailed description of the issue. Include any relevant information, such as steps to reproduce the issue, expected behavior, and actual behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: DSA_Problem
+    attributes:
+      label: "DSA Problem"
+      description: Indicate here the DSA problem that the issue is related to.
+    validations:
+      required: true

@@ -1,0 +1,32 @@
+name: "DSA Issue Request (Bug)"
+description: Create a new ticket for a new DSA bug or correction request
+title: "[BUG] - <title>"
+labels: [
+  "DSA",
+  "Bug",
+  "good first issue",
+  "priority:high",
+  
+]
+body:
+  - type: textarea
+    id: Description
+    attributes:
+      label: "Description"
+      description: Provide a detailed description of the bug or correction. Include any relevant information, such as steps to reproduce the bug, expected behavior, and actual behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: DSA_Problem
+    attributes:
+      label: "DSA Problem"
+      description: Indicate here the DSA problem that the issue is related to.
+    validations:
+      required: true
+  - type: textarea
+    id: Code
+    attributes:
+      label: "Code"
+      description: Provide a code snippet of the code that is affected by the bug or correction.
+    validations:
+      required: false
