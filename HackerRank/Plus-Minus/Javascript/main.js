@@ -42,7 +42,7 @@ function plusMinus(arr) {
   }
 
   result.forEach((num) => {
-    return num.toFixed(6);
+    console.log(num.toFixed(6));
   });
 }
 
