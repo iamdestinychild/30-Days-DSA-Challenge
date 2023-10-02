@@ -5,26 +5,29 @@
 var calPoints = (operations) => {
     let ops = operations;
     let record = [];
-
-    // console.log(typeof(-2))
+    sum = 0
 
     for (let i = 0; i < ops.length; i++){
-        if (ops[i].typeOf == "number") {
-            record[i] = ops[i];
+
+        if (ops[i] == "+") {
+            record.push(Number(record[record.length - 2]) + Number(record[record.length - 1]))
         }
-        else if (ops[i].typeOf == "string") {
-            if (ops[i] == "C") {
-                record[i] = ops;
-            }
-            if (ops[i] == "D") {
-                record[i] = ops[i] * 2;
-            }
-            if (ops[i] == "+") {
-                record[i] = record + ops[i]
-            }
+        else if (ops[i] == "C") {
+            record.pop()
+        }
+        else if (ops[i] == "D") {
+            record.push(2 * Number(record[record.length - 1]))
+        }
+        else {
+            record.push(Number(ops[i]))
         }
     }
-    return record
+
+    record.forEach((score) => {
+        sum += score
+    })
+
+    return sum
 };
 
 console.log(calPoints(["5","2","C","D","+"]));
