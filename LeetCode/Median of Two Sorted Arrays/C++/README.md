@@ -16,17 +16,8 @@ This C++ program finds two numbers in an array that add up to a specified target
 
 6. Run the program by executing the generated executable:
 
-7. The program will execute and display the result, which will show the indices of the two numbers that add up to the target value.
+7. The program will execute and display the result, which will show the required median of the arrays.
 
-## Example Usage
-
-Here's an example of how to use this program:
-
-```shell
-$ g++ twosum.cpp -o Medianofsortedarrrays
-$ ./Medianofsortedarrrays
-Two sorted arrays (internally used as vectors)
-```
 
 ## Intuition
 The problem asks for two arrays which we have used as vectors so as to facilitate the easy movement.It then asks to merge the arrays and sort it and then find the median of the sorted arrays , for odd we get a value existing in the array itself and for even number of elements we get a different value altogether. This approach of using vectors allows us to efficiently evaluate the median without any other logically issue and can be further optimised if needed.
