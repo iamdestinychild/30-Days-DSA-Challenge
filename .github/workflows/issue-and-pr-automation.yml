@@ -45,5 +45,5 @@ jobs:
           script: |
             github.issues.addLabels({
               issue_number: ${{ github.event.issue.number }},
-              labels: ["hacktoberfest", "DSA", "haacktoberfest-Accepted","priority: medium"]
+              labels: ["hacktoberfest", "DSA", "haacktoberfest-Accepted", "priority: medium"]
             })
