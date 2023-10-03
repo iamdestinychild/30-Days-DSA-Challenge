@@ -1,6 +1,0 @@
-{
-    "files.associations": {
-        "*.ejs": "html",
-        "xstring": "cpp"
-    }
-}
