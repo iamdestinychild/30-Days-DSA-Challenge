@@ -1,0 +1,49 @@
+name: Issue and PR Automation
+
+on:
+  # Trigger the workflow on issue creation, pull request creation, and issue reopening.
+  issues:
+    types: [opened, reopened]
+  pull_request:
+    types: [opened]
+
+jobs:
+  # Assign the issue or pull request to the creator.
+  assign-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assign issue or pull request
+        uses: actions/github-script@v5
+        with:
+          script: |
+            const creator = "${{ github.event.issue.user.login }}";
+            github.issues.addAssignees({
+              issue_number: ${{ github.event.issue.number }},
+              assignees: [creator]
+            })
+
+  # Comment on the issue or pull request.
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment on issue or pull request
+        uses: actions/github-script@v5
+        with:
+          script: |
+            github.issues.createComment({
+              issue_number: ${{ github.event.issue.number }},
+              body: "Thanks for your contribution! Please make sure you read the CONTRIBUTING.md file to understand how to contribute to this project."
+            })
+
+  # Add labels to the issue or pull request.
+  add-label:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add labels to issue or pull request
+        uses: actions/github-script@v5
+        with:
+          script: |
+            github.issues.addLabels({
+              issue_number: ${{ github.event.issue.number }},
+              labels: ["hacktoberfest", "DSA", "haacktoberfest-Accepted", "priority: medium"]
+            })
