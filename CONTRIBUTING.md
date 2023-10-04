@@ -18,7 +18,7 @@ To contribute on 30-Days-DSA-Challenge, Follow these steps:
 
     Click the "Fork" button on the top right of this repository to create your own copy.
 
-    ![Forked](./Forked.png)
+    ![Forked](./forked.png)
 
 3. **Clone the project:**
 
