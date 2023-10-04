@@ -8,11 +8,19 @@ The Purpose of this repository is to help people get into data structure and alg
 
 To contribute on 30-Days-DSA-Challenge, Follow these steps:
 
-1. **Fork the repository:**
+1. **Give the project a star**
+
+    Click the "Star" icon on the to right of this repository
+
+    ![Starred](./Starred.png)
+
+2. **Fork the repository:**
 
     Click the "Fork" button on the top right of this repository to create your own copy.
 
-2. **Clone the project:**
+    ![Forked](./forked.png)
+
+3. **Clone the project:**
 
     Use git clone to clone your forked repository to your local machine:
 
@@ -20,7 +28,7 @@ To contribute on 30-Days-DSA-Challenge, Follow these steps:
         git clone https://github.com/your-username/30-Days-DSA-Challenge.git
     ```
 
-3. **Create a new branch:**
+4. **Create a new branch:**
 
     Create a new branch for your contribution. Name it appropriately to describe the work you're doing:
 
@@ -34,7 +42,7 @@ To contribute on 30-Days-DSA-Challenge, Follow these steps:
         git checkout -b 26-RDFSA
     ```
 
-4. **Follow the folder structure**
+5. **Follow the folder structure**
 
     - Create a folder with the name of the problem or issues you are solving (26-Remove-Duplicates-from-Sorted-Array) It should be clear.
     - Create a folder that states the language you are using to solve the problem (python, c#, c++, c, python, javascript, any of your choice).
@@ -42,7 +50,7 @@ To contribute on 30-Days-DSA-Challenge, Follow these steps:
     - Create a PROBLEM.md file that has the question and how you solved it if you like to do so
     - In the language folder take a screenshot of the success message when you solved the problem on leetcode or hackerrank
 
-5. **Make changes and commit:**
+6. **Make changes and commit:**
 
     When you are done with your solution commit your changes with clear commit messages
 
@@ -50,7 +58,7 @@ To contribute on 30-Days-DSA-Challenge, Follow these steps:
         git commit -m "my commit"
     ```
 
-6. **Push your changes**
+7. **Push your changes**
 
     ```bash
         git push origin 26-Remove-Duplicates-from-Sorted-Array
@@ -62,8 +70,8 @@ To contribute on 30-Days-DSA-Challenge, Follow these steps:
         git push origin 26-RDFSA
     ```
 
-7. **Create a pull request**
+8. **Create a pull request**
 
     Go to the 30-Days-DSA-Challenge and click the "New Pull Request" button, give a description of your changes and await review for merge.
 
-**you can give the project a star Happy Coding**
+**Happy Coding**

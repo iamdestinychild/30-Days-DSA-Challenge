@@ -2,8 +2,8 @@ name: "DSA Issue Request"
 description: Create a new ticket for a new DSA issue request
 title: "[ISSUE] - <title>"
 labels: [
-  "DSA",
-  "Issue",
+  "good first issue",
+  "enhancement",
   "hacktoberfest",
   "priority:medium"
 ]
