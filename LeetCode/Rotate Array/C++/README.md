@@ -37,7 +37,7 @@ This solution is implemented in C++. The following steps are taken to solve the 
 6. If no solution is found after the entire loop, return an empty 'result' vector.
 
 ## Complexity
-- Time complexity: O(1) - The constant-time operations do not significantly impact the overall time complexity.
+- Time complexity: O(n) - The constant-time operations do not significantly impact the overall time complexity.
 
 - Space complexity: O(n) - Almost n which is number of elements in array. (vec)
 
