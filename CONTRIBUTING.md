@@ -12,13 +12,13 @@ To contribute on 30-Days-DSA-Challenge, Follow these steps:
 
     Click the "Star" icon on the to right of this repository
 
-    ![starred](./Star.png)
+    ![Starred](./Starred.png)
 
 2. **Fork the repository:**
 
     Click the "Fork" button on the top right of this repository to create your own copy.
 
-    ![forked](./fork.png)
+    ![Forked](./Forked.png)
 
 3. **Clone the project:**
 
