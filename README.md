@@ -12,4 +12,12 @@ Problems are gotten from Leetcode, Hackerrank and other DSA platforms and struct
 * Select the language you want to use in solving the problem
 * you'll find the code, a screenshot and a readMe containing the problem statement
 
+
+<h2 align="center"><b>Contributors</b></h2>
+   
+<p align="center">
+<a href="https://github.com/iamdestinychild/30-Days-DSA-Challenge/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=iamdestinychild/30-Days-DSA-Challenge" />
+</a>
+
 Happy Coding
