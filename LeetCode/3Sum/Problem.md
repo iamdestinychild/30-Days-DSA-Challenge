@@ -17,8 +17,6 @@ nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.<br>
 The distinct triplets are [-1,0,1] and [-1,-1,2].<br>
 Notice that the order of the output and the order of the triplets does not matter.<br><br>
 Example 2:<br>
-
-
 Input: nums = [0,1,1]<br>
 Output: []<br>
 Explanation: The only possible triplet does not sum up to 0.<br>
