@@ -3,7 +3,7 @@ description: Create a new ticket for a new DSA bug or correction request
 title: "[BUG] - <title>"
 labels: [
   "DSA",
-  "Bug",
+  "bug",
   "good first issue",
   "priority:high",
   
