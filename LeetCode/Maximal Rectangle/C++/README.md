@@ -1,0 +1,12 @@
+# 85. Maximal Rectangle
+
+## Approach
+
+1. Height Calculation: The code starts by converting the given matrix of characters ('0' and '1') into a matrix of integers, where each '1' is represented as 1, and each '0' is represented as 0. This new matrix called heights will be used to calculate the height of the rectangle formed at each cell.
+2. Building the Heights Matrix: The heights matrix is constructed iteratively for each row. For each cell (i, j) in the matrix, if the cell contains '1', its height is calculated by adding the height of the previous row's cell at the same column. This step accumulates the number of consecutive '1's above the current cell, forming a histogram-like representation.
+3. Largest Rectangle in Histogram: To find the largest rectangle in a histogram efficiently, the code uses a stack-based approach. It defines two helper functions: nextSmallerElement and prevSmallerElement. These functions calculate the index of the next and previous smaller elements for each element in the heights matrix. The nextSmallerElement function calculates the index of the next smaller element to the right of the current element, and the prevSmallerElement function calculates the index of the next smaller element to the left.
+4. Largest Rectangle for Each Row: For each row in the heights matrix, the code calculates the largest rectangle area using the largestRectangleArea function. This function uses the indices of next and previous smaller elements to calculate the width of the potential rectangle and then calculates the area.
+5. Updating Maximum Area: The maximum rectangle area encountered so far is tracked in the area variable, and whenever a larger rectangle is found, it updates the area.
+6. Final Result: After processing all rows in the heights matrix, the code returns the maximum area, which represents the largest rectangle containing only '1's in the original binary matrix.
+
+**The overall idea is to transform the problem of finding the maximal rectangle in a binary matrix into a problem of finding the largest rectangle in a histogram-like structure for each row. By using the stack-based approach to efficiently find the next and previous smaller elements for each element in the heights matrix, the code can determine the width of potential rectangles and calculate their areas, leading to the solution for the maximal rectangle problem.**
