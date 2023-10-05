@@ -3,42 +3,23 @@
 class Solution
 {
 public:
-    ListNode *mergeTwoLists(ListNode *l1, ListNode *l2)
-    {
-        if (l1 == NULL)
-        {
-            return l2;
-        }
-        if (l2 == NULL)
-        {
-            return l1;
-        }
-        if (l1->val <= l2->val)
-        {
-            ListNode *head = l1;
-            head->next = mergeTwoLists(l1->next, l2);
-            return head;
-        }
-        else
-        {
-            ListNode *head = l2;
-            head->next = mergeTwoLists(l1, l2->next);
-            return head;
-        }
-        return NULL;
-    }
-
     ListNode *mergeKLists(vector<ListNode *> &lists)
     {
-        if (lists.size() == 0)
+        vector<int> v;
+        for (int i = 0; i < lists.size(); i++)
         {
-            return NULL;
+            while (lists[i])
+            {
+                v.push_back(lists[i]->val);
+                lists[i] = lists[i]->next;
+            }
         }
-        ListNode *head = lists[0];
-        for (int i = 1; i < lists.size(); i++)
+        sort(rbegin(v), rend(v));
+        ListNode *ans = nullptr;
+        for (int i = 0; i < v.size(); i++)
         {
-            head = mergeTwoLists(head, lists[i]);
+            ans = new ListNode(v[i], ans);
         }
-        return head;
+        return ans;
     }
 };
