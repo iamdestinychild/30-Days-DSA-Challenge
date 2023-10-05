@@ -4,7 +4,7 @@ To run the above code in terminal type the below code
 
 Python main.py
 
-Approach:
+## Approach:
 
 The approach to solving this problem is based on recursion and divide-and-conquer. We'll recursively break down the expression into smaller sub-expressions by finding operators, and then calculate the possible results for each combination of left and right sub-expressions.
 
