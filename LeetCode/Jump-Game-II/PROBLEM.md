@@ -24,3 +24,12 @@ Return the minimum number of jumps to reach <code>nums[n - 1]</code>. The test c
 <strong>Input: </strong> nums = [2,3,0,1,4]
 <strong>Output: </strong> 2
 </pre>
+
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>1 &lt;= nums.length &lt;= 10^4</code></li>
+  <li><code>0 &lt;= nums[i] &lt;= 1000</code></li>
+  <li>It's guaranteed that you can reach <code>nums[n-1]</code>.</li>
+</ul>
+</div>
