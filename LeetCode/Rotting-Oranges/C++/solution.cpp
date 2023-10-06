@@ -1,5 +1,5 @@
 /*
-Leetcode Problem 994: Rotting Oranges
+Leetcode Problem No. 994: Rotting Oranges
 C++ Solution
 */
 
