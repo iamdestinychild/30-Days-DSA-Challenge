@@ -1,4 +1,4 @@
-name: 'Author Assign'
+name: codecommander03
 
 on:
   pull_request_target:
